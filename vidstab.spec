@@ -41,6 +41,7 @@ developing applications that use %{name}.
 %ifnarch %{ix86} x86_64
 	-DSSE2_FOUND:BOOL=OFF
 %endif
+
 %make
 
 %install
