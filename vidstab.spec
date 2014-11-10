@@ -37,7 +37,10 @@ developing applications that use %{name}.
 
 %build
 %global optflags %{optflags} -Ofast -fopenmp
-%cmake -DUSE_OMP:BOOL=ON
+%cmake	-DUSE_OMP:BOOL=ON \
+%ifnarch %{ix86} x86_64
+	-DSSE2_FOUND:BOOL=OFF
+%endif
 %make
 
 %install
