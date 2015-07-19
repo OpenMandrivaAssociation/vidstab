@@ -4,7 +4,7 @@
 
 Name:		vidstab
 Version:	0.98b
-Release:	2
+Release:	3
 Summary:	Video stabilization library
 Source0:	%{name}-%{version}.tar.xz
 License:	GPLv2
