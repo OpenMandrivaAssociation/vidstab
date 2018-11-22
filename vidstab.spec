@@ -34,7 +34,7 @@ developing applications that use %{name}.
 
 
 %prep
-%setup -q
+%setup -qn %{oname}-%{version}
 
 %build
 %global optflags %{optflags} -Ofast -fopenmp
