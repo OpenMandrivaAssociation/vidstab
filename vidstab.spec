@@ -3,8 +3,8 @@
 %define	devname	%mklibname vidstab -d
 
 Name:		vidstab
-Version:	0.98b
-Release:	6
+Version:	1.1.0
+Release:	1
 Summary:	Video stabilization library
 Source0:	%{name}-%{version}.tar.xz
 License:	GPLv2
