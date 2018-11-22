@@ -49,7 +49,7 @@ developing applications that use %{name}.
 %makeinstall_std -C build
 
 %files -n %{libname}
-%{_libdir}/libvidstab.so.%{major}
+#{_libdir}/libvidstab.so.%{major}
 
 %files -n %{devname}
 %{_libdir}/libvidstab.so
