@@ -1,5 +1,5 @@
 %define oname vid.stab
-%define	major	0.9
+%define	major	1.1
 %define	libname	%mklibname vidstab %{major}
 %define	devname	%mklibname vidstab -d
 
@@ -49,7 +49,7 @@ developing applications that use %{name}.
 %makeinstall_std -C build
 
 %files -n %{libname}
-#{_libdir}/libvidstab.so.%{major}
+%{_libdir}/libvidstab.so.%{major}
 
 %files -n %{devname}
 %{_libdir}/libvidstab.so
