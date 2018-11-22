@@ -27,7 +27,7 @@ Summary:	Development files for %{name}
 Group:		Development/C
 Requires:	%{libname} = %{EVRD}
 
-%description -n	%{name}
+%description -n	%{devname}
 This package contains libraries and signature files for
 developing applications that use %{name}.
 
