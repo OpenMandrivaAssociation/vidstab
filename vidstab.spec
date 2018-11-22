@@ -1,3 +1,4 @@
+%define vid.stab
 %define	major	0.9
 %define	libname	%mklibname vidstab %{major}
 %define	devname	%mklibname vidstab -d
@@ -6,7 +7,7 @@ Name:		vidstab
 Version:	1.1.0
 Release:	1
 Summary:	Video stabilization library
-Source0:	%{name}-%{version}.tar.xz
+Source0:	%{oname}-%{version}.tar.gz
 License:	GPLv2
 Group:		Sound
 Url:		http://public.hronopik.de/vid.stab
