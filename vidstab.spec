@@ -3,15 +3,16 @@
 %define	libname	%mklibname vidstab %{major}
 %define	devname	%mklibname vidstab -d
 
+Summary:	Video stabilization library
 Name:		vidstab
 Version:	1.1.0
-Release:	1
-Summary:	Video stabilization library
-Source0:	%{oname}-%{version}.tar.gz
+Release:	2
 License:	GPLv2
 Group:		Sound
 Url:		http://public.hronopik.de/vid.stab
-BuildRequires:	cmake gomp-devel
+Source0:	%{oname}-%{version}.tar.gz
+BuildRequires:	cmake
+BuildRequires:	gomp-devel
 
 %description
 Video stabilization library with plugins for transcode and ffmpeg.
@@ -34,19 +35,20 @@ developing applications that use %{name}.
 
 
 %prep
-%setup -qn %{oname}-%{version}
+%autosetup -n %{oname}-%{version} -p1
 
 %build
 %global optflags %{optflags} -Ofast -fopenmp
+
 %cmake	-DUSE_OMP:BOOL=ON \
-%ifnarch %{ix86} x86_64
+%ifnarch %{ix86} %{x86_64}
 	-DSSE2_FOUND:BOOL=OFF
 %endif
 
-%make
+%make_build
 
 %install
-%makeinstall_std -C build
+%make_install -C build
 
 %files -n %{libname}
 %{_libdir}/libvidstab.so.%{major}
