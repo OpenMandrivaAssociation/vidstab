@@ -37,10 +37,11 @@ developing applications that use %{name}.
 %autosetup -n %{oname}-%{version} -p1
 
 # (tpg) use OMP form llvm
-sed -i -e "s/-lgomp/-fopenmp/g" CMakeLists.txt
+sed -i -e 's/-lgomp/-fopenmp/g' CMakeLists.txt
 
 %build
 %global optflags %{optflags} -Ofast -fopenmp
+%global ldflags %{ldflags} -fopenmp
 
 %cmake	-DUSE_OMP:BOOL=ON \
 %ifnarch %{ix86} %{x86_64}
