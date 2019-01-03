@@ -32,13 +32,12 @@ Requires:	%{libname} = %{EVRD}
 This package contains libraries and signature files for
 developing applications that use %{name}.
 
-
 %prep
 %autosetup -n %{oname}-%{version} -p1
 
 # (tpg) use OMP form llvm
 sed -i -e 's/-lgomp/-fopenmp/g' CMakeLists.txt
-sed -i -e 's/vidstab gomp/vidstab omp' CMakeLists.txt
+sed -i -e 's/vidstab gomp/vidstab omp/g' CMakeLists.txt
 
 %build
 %global optflags %{optflags} -Ofast -fopenmp
