@@ -38,6 +38,7 @@ developing applications that use %{name}.
 
 # (tpg) use OMP form llvm
 sed -i -e 's/-lgomp/-fopenmp/g' CMakeLists.txt
+sed -i -e 's/vidstab gomp/vidstab omp' CMakeLists.txt
 
 %build
 %global optflags %{optflags} -Ofast -fopenmp
