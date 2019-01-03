@@ -6,13 +6,12 @@
 Summary:	Video stabilization library
 Name:		vidstab
 Version:	1.1.0
-Release:	2
+Release:	3
 License:	GPLv2
 Group:		Sound
 Url:		http://public.hronopik.de/vid.stab
 Source0:	%{oname}-%{version}.tar.gz
 BuildRequires:	cmake
-BuildRequires:	gomp-devel
 
 %description
 Video stabilization library with plugins for transcode and ffmpeg.
@@ -36,6 +35,9 @@ developing applications that use %{name}.
 
 %prep
 %autosetup -n %{oname}-%{version} -p1
+
+# (tpg) use OMP form llvm
+sed -i -e "s/-lgomp/-fopenmp/g" CMakeLists.txt
 
 %build
 %global optflags %{optflags} -Ofast -fopenmp
