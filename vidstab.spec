@@ -6,7 +6,7 @@
 Summary:	Video stabilization library
 Name:		vidstab
 Version:	1.1.0
-Release:	5
+Release:	6
 License:	GPLv2
 Group:		Sound
 Url:		http://public.hronopik.de/vid.stab
