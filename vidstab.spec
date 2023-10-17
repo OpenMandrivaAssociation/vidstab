@@ -1,5 +1,5 @@
 %define oname vid.stab
-%define	major	1.1
+%define	major	1.2
 %define	libname	%mklibname vidstab %{major}
 %define	devname	%mklibname vidstab -d
 
