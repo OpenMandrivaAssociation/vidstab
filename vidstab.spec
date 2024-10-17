@@ -9,7 +9,7 @@ Version:	1.1.1
 Release:	1
 License:	GPLv2
 Group:		Sound
-Url:		http://public.hronopik.de/vid.stab
+Url:		https://public.hronopik.de/vid.stab
 Source0:	https://github.com/georgmartius/vid.stab/archive/refs/tags/v%{version}/%{oname}-%{version}.tar.gz
 BuildRequires:	cmake
 
