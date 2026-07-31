@@ -5,7 +5,7 @@
 
 Summary:	Video stabilization library
 Name:		vidstab
-Version:	1.1.1
+Version:	1.1.2
 Release:	1
 License:	GPLv2
 Group:		Sound
@@ -33,7 +33,7 @@ This package contains libraries and signature files for
 developing applications that use %{name}.
 
 %prep
-%autosetup -n %{oname}-%{version} -p1
+%autosetup -n vid.stab-1.1.2 -p1
 
 # (tpg) use OMP form llvm
 sed -i -e 's/-lgomp/-fopenmp/g' CMakeLists.txt
