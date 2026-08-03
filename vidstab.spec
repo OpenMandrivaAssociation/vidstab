@@ -12,6 +12,7 @@ Group:		Sound
 Url:		https://public.hronopik.de/vid.stab
 Source0:	https://github.com/georgmartius/vid.stab/archive/refs/tags/v%{version}/%{oname}-%{version}.tar.gz
 BuildRequires:	cmake
+BuildRequires:	make
 
 %description
 Video stabilization library with plugins for transcode and ffmpeg.
